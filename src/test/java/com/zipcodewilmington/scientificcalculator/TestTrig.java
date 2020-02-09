@@ -7,64 +7,124 @@ import static org.junit.Assert.*;
 public class TestTrig {
 
         @Test
-        public void sinPositive(){
+        public void sinPositiveDegree(){
 
             Trig TestTrig=new Trig();
             Double actual;
             Double expected=1.0;
             actual= Trig.Sin((double)450, "DEG");
-            assertEquals(expected,actual);
+            assertEquals(expected,actual, .0001);
         }
 
         @Test
-        public void sinNegative(){
+        public void sinNegativeDegree(){
+
+            Trig TestTrig=new Trig();
+            Double actual;
+            Double expected=-1.0;
+            actual= Trig.Sin((double)-450, "DEG");
+            assertEquals(expected,actual, .0001);
+        }
+
+        @Test
+        public void sinPositiveRadian(){
+
+            Trig TestTrig=new Trig();
+            Double actual;
+            Double expected=-0.6832837250355236;
+            actual= Trig.Sin((double)450, "RAD");
+            assertEquals(expected,actual,.0001);
+        }
+
+        @Test
+        public void sinNegativeRadian(){
 
             Trig TestTrig=new Trig();
             Double actual;
             Double expected=0.6832837250355236;
             actual= Trig.Sin((double)-450, "RAD");
-            assertEquals(expected,actual);
+            assertEquals(expected,actual, .0001);
         }
 
 
         @Test
-        public void cosPositive(){
+        public void cosPositiveDegree(){
 
             Trig TestTrig=new Trig();
             Double actual;
             Double expected=0.8746197071393957;
             actual= Trig.Cos((double)389, "DEG");
-            assertEquals(expected,actual);
+            assertEquals(expected,actual, .0001);
         }
 
         @Test
-        public void cosNegative(){
+        public void cosNegativeDegree(){
 
             Trig TestTrig=new Trig();
             Double actual;
             Double expected=0.8485862232545117;
             actual= Trig.Cos((double)-389, "RAD");
-            assertEquals(expected,actual, 0.001);
+            assertEquals(expected,actual,.0001);
+        }
+
+        @Test
+        public void cosPositiveRadian(){
+
+            Trig TestTrig=new Trig();
+            Double actual;
+            Double expected=0.8485862232545117;
+            actual= Trig.Cos((double)389, "RAD");
+            assertEquals(expected,actual, .0001);
+        }
+
+        @Test
+        public void cosNegativeRadian(){
+
+            Trig TestTrig=new Trig();
+            Double actual;
+            Double expected=0.8485862232545117;
+            actual= Trig.Cos((double)-389, "RAD");
+            assertEquals(expected,actual, .0001);
     }
 
         @Test
-        public void tanPositive(){
+        public void tanPositiveDegree(){
 
             Trig TestTrig=new Trig();
             Double actual;
             Double expected=1.633123935319537E16;
             actual= Trig.Tan((double)450, "DEG");
+            assertEquals(expected,actual, .0001);
+        }
+
+        @Test
+        public void tanNegativeDegree(){
+
+            Trig TestTrig=new Trig();
+            Double actual;
+            Double expected=-3.266247870639074E15;
+            actual= Trig.Tan((double)-450, "DEG");
             assertEquals(expected,actual, 1.0001);
         }
 
         @Test
-        public void tanNegative(){
+        public void tanPositiveRadian(){
+
+            Trig TestTrig=new Trig();
+            Double actual;
+            Double expected=0.9358090133927123;
+            actual=(Trig.Tan((double)450, "RAD"));
+            assertEquals(expected,actual, 1.0001);
+        }
+
+        @Test
+        public void tanNegativeRadian(){
 
             Trig TestTrig=new Trig();
             Double actual;
             Double expected=-0.9358090133927123;
             actual=(Trig.Tan((double)-450, "RAD"));
-            assertEquals(expected,actual, 1.001);
+            assertEquals(expected,actual, 1.0001);
     }
 
         @Test
@@ -74,7 +134,7 @@ public class TestTrig {
             Double actual;
             Double expected=-60.0;
             actual= Trig.InvSin(-0.8660254);
-            assertEquals(expected,actual, .0001);
+            assertEquals(expected,actual, 1.0001);
         }
 
         @Test
@@ -84,7 +144,7 @@ public class TestTrig {
             Double actual;
             Double expected=45.0;
             actual= Trig.InvSin(0.7071068);
-            assertEquals(expected,actual, .0001);
+            assertEquals(expected,actual, 1.0001);
          }
 
         @Test
@@ -94,7 +154,7 @@ public class TestTrig {
             Double actual;
             Double expected=45.0;
             actual= Trig.InvCos(0.7071068);
-            assertEquals(expected,actual, .0001);
+            assertEquals(expected,actual, 1.0001);
 
         }
 

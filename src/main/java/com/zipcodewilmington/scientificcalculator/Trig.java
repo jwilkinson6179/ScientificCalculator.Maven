@@ -9,8 +9,7 @@ public class Trig {
         x = 0.0;
     }
 
-        public static Double Sin(Double x, String unitOfMeasurement)
-        {
+    public static Double Sin(Double x, String unitOfMeasurement) {
             if("DEG".equals(unitOfMeasurement))
             {
                 if (x >= 360) {
@@ -18,7 +17,6 @@ public class Trig {
                 }
                 // convert degrees to radians
                 double radians = Math.toRadians(x);
-
                 return Math.sin(radians);
 
             }
@@ -28,11 +26,9 @@ public class Trig {
 
             }
 
-
-
-
     public static Double Cos(Double x, String unitOfMeasurement) {
-        if ("DEG".equals(unitOfMeasurement)) {
+        if ("DEG".equals(unitOfMeasurement))
+        {
 
             if (x >= 360) {
                 x = x % 360;
