@@ -25,6 +25,22 @@ public class TestConversionMath {
     }
 
     @Test
+    public void TestMetersToFeetDecimal() {
+        ConversionMath metersToFeetTest = new ConversionMath();
+        Double actual;
+        Double expected = 7.54593;
+        actual = metersToFeetTest.metersToFeet(2.3);
+        assertEquals(expected, actual, 0.001);
+    }
+    @Test
+    public void TestMetersToFeetWhole() {
+        ConversionMath metersToFeetTest = new ConversionMath();
+        Double actual;
+        Double expected = 19.685;
+        actual = metersToFeetTest.metersToFeet(6.0);
+        assertEquals(expected, actual, 0.001);
+    }
+    @Test
     public void TestCtoF() {
         ConversionMath celsiusToFahrenheitTest = new ConversionMath();
         Double actual;
