@@ -14,7 +14,7 @@ public class BasicMath {
     public static Double division (Double numberOne, Double numberTwo) {
         return numberOne / numberTwo;
     }
-        public static Double exponent (Double numberOne, Double numberTwo){
+    public static Double exponent (Double numberOne, Double numberTwo){
             return Math.pow(numberOne, numberTwo);
     }
     // one operator methods
